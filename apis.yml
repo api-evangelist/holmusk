@@ -1,17 +1,36 @@
 aid: holmusk
 name: Holmusk
-description: 'Holmusk is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Holmusk is a health data science company building real-world evidence (RWE) infrastructure for
+  neuropsychiatry and behavioral health. Its flagship product, NeuroBlu, pairs NeuroBlu Data — a
+  de-identified, NLP-enriched longitudinal dataset covering 46.5M+ US patients across 20+ years of
+  inpatient, outpatient, emergency, crisis and community care — with NeuroBlu Analytics, a hosted
+  research platform offering no-code cohort building (Cohort Explorer), Data Explorer, Category
+  Mapper and an in-platform R / Python / SQL code studio. Customers are pharma R&D, medical affairs,
+  market access/HEOR, payors and health systems. Holmusk is headquartered in Singapore with offices
+  in New York, London and Basel, and also ships MindLinc and MAST behavioral-health software. The
+  NeuroBlu common data model is being aligned with the OHDSI OMOP Common Data Model. As of this
+  profile Holmusk publishes no public developer program, API reference, or machine-readable API
+  contract; the platform and its data dictionary are reachable only after a commercial agreement
+  and login at app.neuroblu.ai.
+image: https://cdn.prod.website-files.com/6078f42d748b85659b713f70/607950e3293570d1a0a53b03_Navbar%3ALogo.svg
 url: https://raw.githubusercontent.com/api-evangelist/holmusk/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-22'
 modified: '2026-08-22'
 tags:
 - Company
+- Healthcare
+- Real-World Evidence
+- Behavioral Health
+- Mental Health
+- Neuropsychiatry
+- Clinical Data
+- Data Analytics
+- Life Sciences
+- HIPAA
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +38,72 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: LLMsTxt
+  url: llms/holmusk-llms.txt
+- type: Conformance
+  url: conformance/holmusk-conformance.yml
+- type: ChangeLog
+  url: changelog/holmusk-changelog.yml
+- type: Lifecycle
+  url: lifecycle/holmusk-lifecycle.yml
+- type: TrustCenter
+  url: security/holmusk-trust-center.yml
+- type: Security
+  url: https://app.neuroblu.ai/.well-known/security.txt
+- type: SecurityTxt
+  url: well-known/holmusk-security.txt
+- type: WellKnown
+  url: well-known/holmusk-well-known.yml
+- type: Packages
+  url: packages/holmusk-packages.yml
+- type: VulnerabilityDisclosure
+  url: security/holmusk-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/holmusk-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.holmusk.com/
+- type: Product
+  name: NeuroBlu
+  url: https://www.neuroblu.ai/
+- type: Login
+  url: https://app.neuroblu.ai/
+- type: Support
+  url: https://www.holmusk.com/contact-us
+- type: Blog
+  url: https://info.holmusk.com/blog
+- type: GitHubOrganization
+  url: https://github.com/Holmusk
+- type: TermsOfService
+  url: https://www.neuroblu.ai/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.neuroblu.ai/platform-privacy-statement
+- type: Compliance
+  url: https://policy.holmusk.com/
+
+x-enrichment:
+  date: '2026-08-22'
+  status: enriched
+  artifacts_added: 12
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Holmusk ships NeuroBlu as a hosted analytics product for research teams and markets no API at
+    all: neither holmusk.com nor neuroblu.ai contains the word API outside blog prose, /developers
+    404s on both, there is no self-serve signup (every call to action is a "Request a demo" form),
+    and the only machine-facing host, app.neuroblu.ai, answers every path including /openapi.json
+    and /.well-known/agent-card.json with the same 827-byte React shell whose one XHR path
+    (/api/rwe/...) is the application's own authenticated internal layer, not an integration surface.
+  evidence:
+    - url: https://www.holmusk.com/developers
+      status: 404
+    - url: https://www.neuroblu.ai/developers
+      status: 404
+    - url: https://app.neuroblu.ai/openapi.json
+      status: 200
+    - url: https://www.neuroblu.ai/.well-known/api-catalog
+      status: 404
+    - url: https://app.neuroblu.ai/.well-known/security.txt
+      status: 200
+  checked: '2026-08-22'

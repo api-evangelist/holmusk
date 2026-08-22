@@ -1,0 +1,114 @@
+generated: '2026-08-22'
+method: searched
+source: >-
+  hackage.haskell.org (upload metadata per package), pub.dev API, package.elm-lang.org releases.json,
+  registry.npmjs.org, pypi.org — all probed unauthenticated on 2026-08-22; plus the GitHub org
+  https://github.com/Holmusk (44 public repos, org description "H is for Haskell").
+note: >-
+  IMPORTANT — none of these are API client SDKs. Holmusk publishes no public API, so there is no
+  client library to wrap one. What the Holmusk engineering org publishes is general-purpose open
+  source: Haskell web/infrastructure libraries on Hackage, an Elm emoji picker, and a Flutter image
+  cache. They are catalogued here because they are genuinely first-party published artifacts, but
+  NO `SDKs` pointer is emitted in apis.yml — doing so would credit Holmusk with an API client
+  surface it does not ship. Searches for `neuroblu` and `holmusk` on npm, PyPI and CRAN all
+  returned 404.
+package_count: 6
+official_count: 6
+sdk_count: 0
+packages:
+- language: haskell
+  registry: hackage
+  name: elm-street
+  url: https://hackage.haskell.org/package/elm-street
+  install: cabal install elm-street
+  repository: https://github.com/Holmusk/elm-street
+  description: Crossing the road between Haskell and Elm — generate Elm types/decoders from Haskell types.
+  official: true
+  api_client: false
+  version: 0.2.2.2
+  published: '2025-12-15'
+  publisher: HolmuskTechTeam
+- language: haskell
+  registry: hackage
+  name: servant-hmac-auth
+  url: https://hackage.haskell.org/package/servant-hmac-auth
+  install: cabal install servant-hmac-auth
+  repository: https://github.com/Holmusk/servant-hmac-auth
+  description: Servant authentication with HMAC.
+  official: true
+  api_client: false
+  version: '0.1.9'
+  published: '2025-12-02'
+  publisher: HolmuskTechTeam
+- language: haskell
+  registry: hackage
+  name: postgresql-simple-named
+  url: https://hackage.haskell.org/package/postgresql-simple-named
+  install: cabal install postgresql-simple-named
+  repository: https://github.com/Holmusk/postgresql-simple-named
+  description: Named parameters for the postgresql-simple library.
+  official: true
+  api_client: false
+  version: 0.0.6.0
+  published: '2025-11-28'
+  publisher: HolmuskTechTeam
+- language: haskell
+  registry: hackage
+  name: servant-docs-simple
+  url: https://hackage.haskell.org/package/servant-docs-simple
+  install: cabal install servant-docs-simple
+  repository: https://github.com/Holmusk/servant-docs-simple
+  description: Generate documentation for API endpoints via typerep.
+  official: true
+  api_client: false
+  version: 0.4.0.0
+  published: '2021-09-21'
+  publisher: HolmuskTechTeam
+  note: Last released 2021; the GitHub repo was last pushed 2021-09-21.
+- language: elm
+  registry: elm
+  name: Holmusk/elmoji
+  url: https://package.elm-lang.org/packages/Holmusk/elmoji/latest/
+  install: elm install Holmusk/elmoji
+  repository: https://github.com/Holmusk/elmoji
+  description: Elm emoji picker.
+  official: true
+  api_client: false
+  version: 1.0.5
+  published: '2024-05-01'
+- language: dart
+  registry: pub.dev
+  name: s3_cache_image
+  url: https://pub.dev/packages/s3_cache_image
+  install: flutter pub add s3_cache_image
+  repository: https://github.com/Holmusk/s3_cache_image
+  description: An S3 image cache for Flutter.
+  official: true
+  api_client: false
+  version: 0.0.1
+  published: '2018-09-10'
+  publisher: null
+  note: >-
+    pubspec homepage is https://www.holmusk.com and the author address is @holmusk.com, but the
+    package carries no pub.dev verified publisher (publisherId null). Single 0.0.1 release from 2018.
+platform_libraries:
+- name: NeuroBlu Python Library
+  registry: null
+  version: null
+  published: null
+  distribution: in-platform
+  url: https://www.neuroblu.ai/announcements
+  note: >-
+    NeuroBlu Analytics ships a first-party Python library plus R and SQL tooling inside its hosted
+    Code Studio / SQL Studio (release notes reference "Performance Improvements in NeuroBlu Python
+    Library", v4.3, 2024-08-14, and "Introducing NeuralRiskModels package", 2021-11-01). It is not
+    published to PyPI, CRAN or any other public registry — checked 2026-08-22, pypi.org/pypi/neuroblu
+    returned 404 — so there is no registry metadata endpoint to read a version or release date from.
+    version/published are null because the distribution is authenticated-platform-only, not because
+    they were not checked.
+not_found:
+- {registry: npm, query: neuroblu, status: 404}
+- {registry: npm, query: holmusk, status: 404}
+- {registry: pypi, query: neuroblu, status: 404}
+- {registry: pypi, query: holmusk, status: 404}
+- {registry: cran, query: neuroblu, status: 404}

@@ -1,0 +1,52 @@
+generated: '2026-08-22'
+method: searched
+source: https://www.neuroblu.ai/service-level-agreement
+note: >-
+  Lifecycle here describes the NeuroBlu Analytics PLATFORM, not an API — Holmusk publishes no API,
+  so there are no versioned endpoints, no Sunset/Deprecation headers, and no deprecation policy to
+  record. What is published is a real, public, contractual SLA and a dated release feed.
+versioning:
+  scheme: product-release
+  platform_current: v5.2
+  dataset_current: 26R3
+  docs: https://www.neuroblu.ai/announcements
+  api_versioning: null
+  note: >-
+    Two streams — platform vMAJOR.MINOR and dataset YYRn. Dataset releases are the ones that change
+    study results; both are announced on the release feed, neither is exposed through an API version
+    header or path because there is no public API.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: No deprecation or sunset policy is published on any public Holmusk or NeuroBlu surface (probed 2026-08-22).
+sla:
+  url: https://www.neuroblu.ai/service-level-agreement
+  version: '1.2'
+  last_revised: '2021-10-20'
+  uptime_target: null
+  uptime_note: >-
+    The SLA commits Holmusk to "use commercially reasonable efforts to maintain the Minimum Service
+    Level" but the published page states no percentage — the Minimum Service Level is defined in the
+    customer's Order Form, not in the public document. No uptime number is recorded here because
+    none is published.
+  support_hours: 08:00-18:00 America/New_York, business days
+  critical_response: 4 hours during support hours, 12 hours outside support hours
+  outage_notification: within 4 hours of Holmusk becoming aware, by email to the customer notice contact
+  service_disruption_threshold: disruptions under 1 hour are treated as insignificant
+  maintenance_window: 23:00-04:00 America/New_York, with >= 3 business days notice (2 hours notice for emergency maintenance)
+  exclusions: [scheduled maintenance, force majeure, customer acts, third-party network/transmission issues]
+status_page: null
+status_page_note: >-
+  No status page found. status.holmusk.com and status.neuroblu.ai do not resolve;
+  holmusk.statuspage.io and neuroblu.statuspage.io both return the generic Atlassian Statuspage
+  marketing page (HTTP 200, title "Real-Time Incident Communication with Statuspage | Atlassian"),
+  which is an unclaimed subdomain, not a Holmusk status page. Outage communication is by email per
+  the SLA.
+support:
+  url: https://www.holmusk.com/contact-us
+  channels: [email, telephone]
+  contacts:
+    legal: legal@holmusk.com
+    privacy: privacy@holmusk.com
+    security_disclosure: disclosure@holmusk.com
+deprecated_operations: []

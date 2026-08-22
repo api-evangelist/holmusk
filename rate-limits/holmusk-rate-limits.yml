@@ -1,0 +1,20 @@
+generated: '2026-08-22'
+method: searched
+source: https://www.neuroblu.ai/ ; https://www.holmusk.com/ ; probes of every Holmusk/NeuroBlu host on 2026-08-22
+limit_count: 0
+headers: []
+note: >-
+  No rate limits are documented, because no public API is documented. Holmusk publishes no developer
+  portal, API reference, or machine-readable contract on any host probed (www.holmusk.com,
+  www.neuroblu.ai, app.neuroblu.ai, insights.neuroblu.ai, providers.neuroblu.ai,
+  chartreview.holmusk.com, policy.holmusk.com, info.holmusk.com), so there is no published limit,
+  window, burst, retry header, or exhaustion status code to record. The only API surface observed is
+  the NeuroBlu web application's own internal XHR layer (a /api/rwe/... path referenced in the
+  app.neuroblu.ai JavaScript bundle), which is authenticated and undocumented; its limits, if any,
+  are not public. An honest zero, not an unchecked field.
+limits: []
+evidence:
+- {url: 'https://www.neuroblu.ai/developers', status: 404}
+- {url: 'https://www.holmusk.com/developers', status: 404}
+- {url: 'https://www.neuroblu.ai/api', status: 404}
+- {url: 'https://www.holmusk.com/api', status: 404}

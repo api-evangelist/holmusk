@@ -64,5 +64,11 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Holmusk is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Holmusk is a health data science company building real-world evidence (RWE) infrastructure for neuropsychiatry and behavioral health. Its NeuroBlu product pairs NeuroBlu Data — a de-identified, NLP-enriched longitudinal dataset covering 46.5M+ US patients across 20+ years of care — with NeuroBlu Analytics, a hosted research platform (Cohort Explorer, Data Explorer, Category Mapper, SQL Studio, and an in-platform R/Python code studio). Headquartered in Singapore, with offices in New York, London and Basel.
+
+As of 2026-08-22 Holmusk publishes no public API: no developer portal, no API reference, and no OpenAPI, AsyncAPI, GraphQL, gRPC or SOAP contract on any Holmusk or NeuroBlu host. Access is by commercial agreement and login. See `x-coverage` in `apis.yml` for the probe record.
+
+- https://www.holmusk.com/
+- https://www.neuroblu.ai/
+- https://policy.holmusk.com/ (public HIPAA / HITRUST compliance policies)
+- https://github.com/Holmusk

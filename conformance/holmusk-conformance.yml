@@ -1,0 +1,79 @@
+generated: '2026-08-22'
+method: searched
+source: >-
+  https://policy.holmusk.com/ ; https://www.neuroblu.ai/announcements/expanding-the-behavioral-health-evidence-blueprint-with-neurodb-22r2-and-cdm-2-0 ;
+  https://www.neuroblu.ai/service-level-agreement
+note: >-
+  Holmusk publishes no machine-readable API contract, so every entry below is evidenced from the
+  provider's own published prose rather than from a spec. Nothing is derived from an OpenAPI,
+  because there is none to derive from. Standards with no public evidence are recorded as
+  conforms: false with an explicit "not evidenced" note rather than left out.
+standards:
+- id: omop-cdm
+  name: OMOP Common Data Model (OHDSI)
+  domain_standard: true
+  conforms: true
+  level: aligned
+  evidence: >-
+    Holmusk states it is aligning the NeuroBlu Common Data Model with "the Observational Medical
+    Outcomes Partnership (OMOP) standards provided by OHDSI" and names OMOP tables it added in
+    CDM 2.0 — visit_detail, drug_era, procedure_occurrence, provider, location — plus enhancements
+    to drug_exposure. The NeuroBlu Analytics application bundle links its in-platform data
+    documentation to https://ohdsi.github.io/CommonDataModel/cdm54.html (OMOP CDM v5.4).
+  evidence_url: https://www.neuroblu.ai/announcements/expanding-the-behavioral-health-evidence-blueprint-with-neurodb-22r2-and-cdm-2-0
+  verified_against_contract: false
+  verification_note: >-
+    Alignment is a provider claim about the data model behind an authenticated platform. There is no
+    public contract, schema export, or data dictionary to verify it against — access to the data
+    dictionary requires a NeuroBlu login.
+- id: hipaa
+  name: HIPAA Security Rule / HITECH
+  conforms: true
+  evidence: >-
+    Full public policy set mapped to HIPAA Security Rule citations and HITECH breach-notification
+    provisions; Holmusk operates as a business associate handling customer ePHI.
+  evidence_url: https://policy.holmusk.com/
+- id: hitrust-csf
+  name: HITRUST Common Security Framework
+  conforms: true
+  level: claimed
+  evidence: >-
+    "current production systems on this platform are included in Holmusk's third-party audits and
+    HITRUST compliance"; every policy section lists its applicable HITRUST CSF standards. HITRUST
+    reports and CAPs are shared with customers under NDA only, so the certificate itself is not public.
+  evidence_url: https://policy.holmusk.com/
+- id: saml-sso
+  name: Enterprise SSO
+  conforms: true
+  level: claimed
+  evidence: >-
+    "Enterprise SSO Integration" shipped in NeuroBlu Analytics v4.6 (2024-10-31). The protocol
+    (SAML vs OIDC) is not stated publicly and no OIDC discovery document is served
+    (app.neuroblu.ai/.well-known/openid-configuration answers with the SPA shell, not a document).
+  evidence_url: https://www.neuroblu.ai/announcements/neuroblu-analytics-v4-6-new-data-partner-enterprise-sso-integration-and-enhanced-analytics-tools
+- id: rfc9116-security-txt
+  name: RFC 9116 security.txt
+  conforms: partial
+  evidence: >-
+    Served at https://app.neuroblu.ai/.well-known/security.txt with Contact and Expires only; the
+    Expires value (2025-12-31) had passed when probed on 2026-08-22, so the document is stale.
+  evidence_url: https://app.neuroblu.ai/.well-known/security.txt
+- id: openapi
+  name: OpenAPI
+  conforms: false
+  evidence: 'Not evidenced: no OpenAPI/Swagger document found on any Holmusk or NeuroBlu host (see x-coverage in apis.yml).'
+- id: fhir
+  name: HL7 FHIR
+  conforms: false
+  evidence: >-
+    'Not evidenced: FHIR is the obvious domain standard for a behavioral-health data company, but no
+    Holmusk or NeuroBlu public surface mentions a FHIR endpoint, resource, or interface. Data is
+    delivered through the hosted analytics platform, not through a clinical interoperability API.'
+- id: oauth2
+  name: OAuth 2.0
+  conforms: false
+  evidence: 'Not evidenced: no public OAuth authorization-server metadata (/.well-known/oauth-authorization-server returns the SPA shell on app.neuroblu.ai, 404 elsewhere).'
+- id: rfc9457-problem-details
+  name: RFC 9457 Problem Details
+  conforms: false
+  evidence: 'Not evidenced: no public API to return problem documents.'

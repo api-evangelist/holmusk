@@ -1,0 +1,115 @@
+generated: '2026-08-22'
+method: searched
+source: probed live on 2026-08-22 against every Holmusk / NeuroBlu host found via certificate
+  transparency (api.certspotter.com) and the corporate + product sites
+note: >-
+  One real document was served: https://app.neuroblu.ai/.well-known/security.txt (HTTP 200,
+  content-type text/plain, 73 bytes, nginx last-modified 2026-08-12). It is genuine, not the
+  catch-all — every OTHER path on app.neuroblu.ai answers 200 with the same 827-byte React SPA
+  shell (content-type text/html), which is recorded below as status 200 with soft_404: true and
+  file: null so it is never credited as a document. The corporate site (www.holmusk.com) and the
+  product marketing site (www.neuroblu.ai) are Webflow and return a real 404 for every
+  /.well-known/ path. The security.txt Expires field (2025-12-31) is in the past, so the document
+  is served but STALE under RFC 9116.
+hit_count: 1
+soft_404_control:
+  host: https://app.neuroblu.ai
+  path: /.well-known/this-path-does-not-exist-ae-probe
+  status: 200
+  bytes: 827
+  content_type: text/html
+  note: SPA catch-all; any 200 of this exact size/type on this host is not a document.
+hosts:
+- host: https://app.neuroblu.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    content_type: text/plain
+    bytes: 73
+    file: holmusk-security.txt
+  - path: /.well-known/openid-configuration
+    status: 200
+    soft_404: true
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    soft_404: true
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    soft_404: true
+    file: null
+  - path: /.well-known/api-catalog
+    status: 200
+    soft_404: true
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    soft_404: true
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 200
+    soft_404: true
+    file: null
+  - path: /.well-known/agent.json
+    status: 200
+    soft_404: true
+    file: null
+- host: https://www.holmusk.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+- host: https://www.neuroblu.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+- host: https://insights.neuroblu.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+- host: https://policy.holmusk.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+- host: https://info.holmusk.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null

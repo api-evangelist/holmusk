@@ -1,0 +1,108 @@
+generated: '2026-08-22'
+method: searched
+source: https://www.neuroblu.ai/announcements
+docs: https://www.neuroblu.ai/announcements
+note: >-
+  NeuroBlu Analytics publishes a dated, categorised release feed on the product marketing site
+  (categories: NEW RELEASE / General / EVENT). It is a product changelog, not an API changelog —
+  Holmusk publishes no API, so no breaking-change or deprecation notices appear in it. Two version
+  streams run in parallel and both are recorded below: the PLATFORM version (semver-ish vMAJOR.MINOR,
+  currently v5.2) and the DATASET release (YYRn, e.g. 26R3), which is the number that actually
+  changes what a study returns. Recent window only; the live feed is the source of truth. No RSS or
+  JSON feed is offered for this changelog — it is HTML on a Webflow site.
+versioning:
+  platform_scheme: v<major>.<minor>
+  platform_current: v5.2
+  dataset_scheme: <YY>R<n>
+  dataset_current: 26R3
+  feed_formats: [html]
+  rss: null
+entry_count: 12
+entries:
+- version: v5.2
+  date: '2026-08-05'
+  category: new-release
+  title: 'NeuroBlu Analytics v5.2: 188M+ Clinical Notes, 10x NLP Label Growth, Deeper Scale Coverage'
+  dataset: 26R3
+  highlights: Deeper clinical notes, NLP labels and scale coverage; symptom-level detail across depressive and psychotic disorders.
+  breaking: false
+  url: https://www.neuroblu.ai/announcements/neuroblu-analytics-v5-2-188m-clinical-notes-10x-nlp-label-growth-deeper-scale-coverage
+- version: null
+  date: '2026-07-15'
+  category: general
+  title: 'Introducing Symptom Intelligence: Symptom-Level RWE for Neuropsychiatry'
+  highlights: 46M+ patients, 3,099 clinician-validated mappings, 63 symptoms, 5 disorders.
+  breaking: false
+  url: https://www.neuroblu.ai/announcements/introducing-symptom-intelligence-symptom-level-rwe-for-neuropsychiatry
+- version: v5.0
+  date: '2026-06-04'
+  category: new-release
+  title: 'NeuroBlu hits 46M Patients: New Partners, Reports BETA and Expanded Symptom Intelligence'
+  highlights: Crosses 46M patients, Reports launched into preview, Symptom Intelligence v2 across an expanded partner network.
+  breaking: false
+  url: https://www.neuroblu.ai/announcements/neuroblu-crosses-46m-patients-new-partners-reports-beta-and-expanded-symptom-intelligence
+- version: null
+  date: '2026-03-23'
+  category: new-release
+  title: NeuroBlu crosses 41M patients, introduces 6 new scales and Symptom Intelligence
+  highlights: 41M+ patients, 6 new clinical scales, new therapeutic areas, Symptom Intelligence to production.
+  breaking: false
+  url: https://www.neuroblu.ai/announcements/neuroblu-crosses-41m-patients-introduces-6-new-scales-and-symptom-intelligence
+- version: v4.23
+  date: '2025-12-12'
+  category: new-release
+  title: 'NeuroBlu Analytics v4.23: 25R4 Dataset, Clinical Code Editor, and SQL Criteria in Cohort Explorer'
+  dataset: 25R4
+  highlights: Clinical Code Editor, SQL criteria in Cohort Explorer, dataset expansion.
+  breaking: false
+  url: https://www.neuroblu.ai/announcements/neuroblu-analytics-v4-23-clinical-code-editor-sql-criteria-in-cohort-explorer-and-the-25r4-dataset
+- version: v4.19
+  date: '2025-09-09'
+  category: new-release
+  title: 'NeuroBlu Analytics v4.19: Transformative 25R3 Dataset Release'
+  dataset: 25R3
+  highlights: Deeper coverage in Alzheimer's disease, major depressive disorder and schizophrenia.
+  breaking: false
+  url: https://www.neuroblu.ai/announcements/neuroblu-analytics-v4-19-transformative-25r3-dataset-release
+- version: null
+  date: '2025-08-27'
+  category: general
+  title: "H1 2025 Highlights: NeuroBlu's Expansion into Full-Spectrum Behavioral & Neuro RWE"
+  highlights: 7 major releases, 50+ new features in H1 2025.
+  breaking: false
+  url: https://www.neuroblu.ai/announcements/h1-2025-highlights-neuroblus-expansion-into-full-spectrum-behavioral-neuro-rwe
+- version: v4.13
+  date: '2025-05-06'
+  category: new-release
+  title: 'v4.13 — Expanded Cognitive Assessments with 25R2 and Streamlined Data Documentation'
+  dataset: 25R2
+  highlights: New cognitive scales, easier-to-navigate data documentation.
+  breaking: false
+- version: v4.11
+  date: '2025-03-19'
+  category: new-release
+  title: 'NeuroBlu Analytics v4.11 — Density Timeline in Cohort Explorer, SQL Studio v1, SQL Templates'
+  highlights: SQL Studio v1, density timeline, SQL templates for pharma departments.
+  breaking: false
+  url: https://www.neuroblu.ai/announcements/neuroblu-analyticsv4-11---density-timeline-in-cohort-explorer-sql-studio-v1-sql-templates-for-pharma-depts
+- version: v4.10
+  date: '2025-02-20'
+  category: new-release
+  title: 'NeuroBlu Analytics v4.10: 25R1 and Updates to Cohort Explorer — Measurements'
+  dataset: 25R1
+  breaking: false
+  url: https://www.neuroblu.ai/announcements/neuroblu-analytics-v4-10-25r1-and-updates-to-cohort-explorer---measurements
+- version: v4.8
+  date: '2024-12-11'
+  category: new-release
+  title: 'NeuroBlu Analytics v4.8: 24R7, Attrition Chart in Cohort Explorer, Import Cohort into SQL Studio'
+  dataset: 24R7
+  breaking: false
+  url: https://www.neuroblu.ai/announcements/neuroblu-analytics-v4-8-24r7-attrition-chart-in-cohort-explorer-import-cohort-into-sql-studio
+- version: v4.6
+  date: '2024-10-31'
+  category: new-release
+  title: 'NeuroBlu Analytics v4.6: New Data Partner, Enterprise SSO Integration, and Enhanced Analytics Tools'
+  highlights: Enterprise SSO integration for platform login; new healthcare provider data partner.
+  breaking: false
+  url: https://www.neuroblu.ai/announcements/neuroblu-analytics-v4-6-new-data-partner-enterprise-sso-integration-and-enhanced-analytics-tools

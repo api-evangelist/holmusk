@@ -1,0 +1,20 @@
+generated: '2026-08-22'
+method: searched
+source: https://www.neuroblu.ai/ ; https://www.holmusk.com/solutions
+plan_count: 0
+currency: null
+note: >-
+  Holmusk publishes no pricing of any kind. There is no pricing page — https://www.holmusk.com/pricing
+  and https://www.neuroblu.ai/pricing both return HTTP 404, and neither sitemap.xml contains a pricing
+  URL. Every commercial call to action on both sites is a contact form ("Request a demo", "Get in
+  touch", "Contact Us"); NeuroBlu Analytics has no self-serve signup, only a login at
+  app.neuroblu.ai for existing customers. Commercial terms live in a per-customer Order Form
+  referenced by the Terms of Service and the SLA (the SLA's Minimum Service Level is likewise
+  defined in the Order Form, not published). This is an enterprise sales motion, recorded as a
+  measured zero rather than omitted.
+plans: []
+evidence:
+- {url: 'https://www.holmusk.com/pricing', status: 404}
+- {url: 'https://www.neuroblu.ai/pricing', status: 404}
+- {url: 'https://www.neuroblu.ai/terms-of-service', status: 200, note: 'references an Order Form for fees; no published rates'}
+- {url: 'https://www.neuroblu.ai/service-level-agreement', status: 200, note: 'Minimum Service Level set in the Order Form'}
